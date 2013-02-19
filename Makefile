@@ -8,7 +8,10 @@ template.js: template.html
 components: component.json
 	@component install --dev
 
+lint:
+	@jshint index.js
+
 clean:
 	rm -fr build components template.js
 
-.PHONY: clean
+.PHONY: clean lint
