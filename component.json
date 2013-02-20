@@ -4,14 +4,22 @@
   "description": "Timepicker component",
   "version": "0.0.1",
   "keywords": [],
-  "dependencies": {},
-  "development": {},
+  "dependencies": {
+    "code42day/clock": "*",
+    "component/emitter": "*",
+    "component/event": "*",
+    "component/popover": "*"
+  },
+  "development": {
+    "code42day/aurora-clock": "*",
+    "component/aurora-popover": "*"
+  },
   "license": "MIT",
   "scripts": [
     "index.js",
-    "template.js"
+    "lib/timepicker.js"
   ],
   "styles": [
-    "timepicker.css"
+    "lib/timepicker.css"
   ]
 }

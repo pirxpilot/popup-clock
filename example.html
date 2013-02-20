@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Timepicker</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="build/build.css">
+    <script src="build/build.js"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 100px;
+        font-size: 14px;
+      }
+      .clock {
+        border: none;
+        margin: 0;
+      }
+      .popover-content {
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" name="time" placeholder="Choose time">
+    <script>
+      var picker = require('timepicker');
+      var el = document.querySelector('[name=time]');
+      picker(el)
+        .on('change', function(v) {
+          el.value = '' + (v.hour || '00') + ':' + (v.minute || '00');
+        })
+        .on('show', function() {
+          console.log('Timepicker shown');
+        })
+        .on('hide', function() {
+          console.log('Timepicker hidden');
+        });
+    </script>
+  </body>
+</html>

@@ -1,15 +1,18 @@
+SRC=index.js lib/timepicker.js
 
-build: components index.js timepicker.css template.js
+all: lint build
+
+build: components lib/timepicker.css $(SRC)
 	@component build --dev
 
-template.js: template.html
+%.js: %.html
 	@component convert $<
 
 components: component.json
 	@component install --dev
 
 lint:
-	@jshint index.js
+	@jshint $(SRC)
 
 clean:
 	rm -fr build components template.js
