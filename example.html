@@ -26,8 +26,10 @@
       var picker = require('timepicker');
       var el = document.querySelector('[name=time]');
       picker(el)
-        .on('change', function(v) {
-          el.value = '' + (v.hour || '00') + ':' + (v.minute || '00');
+        .on('change', function(v, complete) {
+          var value = '' + (v.hour || '00') + ':' + (v.minute || '00');
+          value += complete ? ' <complete>' : ' <pending>';
+          el.value = value;
         })
         .on('show', function() {
           console.log('Timepicker shown');
