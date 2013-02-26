@@ -21,22 +21,37 @@
     </style>
   </head>
   <body>
-    <input type="text" name="time" placeholder="Choose time">
+    <h1>Timepicker</h1>
+    <div>
+      <h2>Input as trigger</h2>
+      <input type="text" class="time" placeholder="Choose time"/>
+    </div>
+    <div>
+      <h2>Link as trigger</h2>
+      <input type="text" class='trigger-time'/>
+      <a href='#' class='trigger'>Click to change time</a>
+    </div>
     <script>
+      function update(el, v, complete) {
+        var value = '' + (v.hour || '00') + ':' + (v.minute || '00');
+        value += complete ? ' <complete>' : ' <pending>';
+        el.value = value;
+      }
+
       var picker = require('timepicker');
-      var el = document.querySelector('[name=time]');
+      var el = document.querySelector('.time');
       picker(el)
-        .on('change', function(v, complete) {
-          var value = '' + (v.hour || '00') + ':' + (v.minute || '00');
-          value += complete ? ' <complete>' : ' <pending>';
-          el.value = value;
-        })
+        .on('change', update.bind(null, el))
         .on('show', function() {
           console.log('Timepicker shown');
         })
         .on('hide', function() {
           console.log('Timepicker hidden');
         });
+
+      var trigger = document.querySelector('.trigger');
+      var triggerTime = document.querySelector('.trigger-time');
+      picker(trigger).on('change', update.bind(null, triggerTime));
     </script>
   </body>
 </html>
