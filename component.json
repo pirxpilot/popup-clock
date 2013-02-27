@@ -2,7 +2,7 @@
   "name": "timepicker",
   "repo": "code42day/timepicker",
   "description": "Timepicker component",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "keywords": [],
   "dependencies": {
     "code42day/clock": "*",
