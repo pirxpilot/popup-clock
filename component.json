@@ -5,7 +5,7 @@
   "version": "1.0.0",
   "keywords": [],
   "dependencies": {
-    "code42day/clock": "*",
+    "slifszyc/clock": "*",
     "component/emitter": "*",
     "component/event": "*",
     "component/popover": "*"
