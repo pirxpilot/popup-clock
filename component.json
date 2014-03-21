@@ -3,7 +3,7 @@
   "repo": "code42day/timepicker",
   "demo": "http://code42day.github.io/timepicker/",
   "description": "Timepicker component",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "keywords": [],
   "dependencies": {
     "code42day/clock": "1.2.0",

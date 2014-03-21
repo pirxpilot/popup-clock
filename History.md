@@ -1,4 +1,11 @@
 
+1.1.0 / 2014-03-21
+==================
+
+ * add links to online demo
+ * fix after domify upgrade
+ * freeze component dependencies - update to latest versions
+
 1.0.0 / 2013-02-27 
 ==================
 
