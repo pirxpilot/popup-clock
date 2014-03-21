@@ -1,6 +1,7 @@
 {
   "name": "timepicker",
   "repo": "code42day/timepicker",
+  "demo": "http://code42day.github.io/timepicker/",
   "description": "Timepicker component",
   "version": "1.0.0",
   "keywords": [],

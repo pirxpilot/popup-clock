@@ -5,6 +5,9 @@
 
   ![Timepicker](https://gist.github.com/pirxpilot/5011178/raw/9a02c67f55d648cfd65f73d8ff9be81675b79d07/timepicker-preview.png)
 
+  Click [here](http://code42day.github.io/timepicker/) to see online demo.
+
+
 ## Installation
 
     $ component install code42day/timepicker
