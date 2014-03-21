@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Timepicker</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="build/build.css">
+    <script src="build/build.js"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 100px;
+        font-size: 14px;
+      }
+      .clock {
+        border: none;
+        margin: 0;
+      }
+      .popover-content {
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Timepicker</h1>
+    <div>
+      <h2>Input as trigger</h2>
+      <input type="text" class="time" placeholder="Choose time"/>
+    </div>
+    <div>
+      <h2>Link as trigger</h2>
+      <input type="text" class='trigger-time'/>
+      <a href='#' class='trigger'>Click to change time</a>
+    </div>
+    <script>
+      function update(el, v, complete) {
+        var value = '' + (v.hour || '00') + ':' + (v.minute || '00');
+        value += complete ? ' <complete>' : ' <pending>';
+        el.value = value;
+      }
+
+      var picker = require('timepicker');
+      var el = document.querySelector('.time');
+      picker(el)
+        .on('change', update.bind(null, el))
+        .on('show', function() {
+          console.log('Timepicker shown');
+        })
+        .on('hide', function() {
+          console.log('Timepicker hidden');
+        });
+
+      var trigger = document.querySelector('.trigger');
+      var triggerTime = document.querySelector('.trigger-time');
+      picker(trigger).on('change', update.bind(null, triggerTime));
+    </script>
+  </body>
+</html>
