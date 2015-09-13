@@ -1,20 +1,33 @@
+PROJECT=timepicker
 SRC=index.js lib/timepicker.js
 
-all: lint build
+all: check compile
 
-build: components lib/timepicker.css $(SRC)
-	@component build --dev
+check: lint
 
-%.js: %.html
-	@component convert $<
+compile: build/build.js build/build.css
 
-components: component.json
-	@component install --dev
+build:
+	mkdir -p $@
+
+build/build.css: \
+		node_modules/popover-component/node_modules/component-tip/tip.css \
+		node_modules/code42day-clock/lib/clock.css \
+		lib/timepicker.css | build
+	cat $^ > $@
+
+build/build.js: node_modules $(SRC) | build
+	browserify --require ./index.js:$(PROJECT) --outfile $@
+
+.DELETE_ON_ERROR: build/build.js
+
+node_modules: package.json
+	npm install
 
 lint:
-	@jshint $(SRC)
+	jshint $(SRC)
 
 clean:
-	rm -fr build components template.js
+	rm -fr build node_modules
 
-.PHONY: clean lint
+.PHONY: clean lint check all compile
