@@ -1,0 +1,32 @@
+{
+  "name": "code42day-timepicker",
+  "version": "1.1.2",
+  "description": "Timepicker component",
+  "scripts": {
+    "test": "make check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/code42day/timepicker.git"
+  },
+  "keywords": [
+    "browser"
+  ],
+  "dependencies": {
+    "code42day-clock": "^1.2.1",
+    "component-emitter": "^1.1.2",
+    "component-event": "^0.1.3",
+    "popover-component": "^1.1.1"
+  },
+  "browser": {
+    "clock": "code42day-clock",
+    "emitter": "component-emitter",
+    "event": "component-event",
+    "popover": "popover-component"
+  },
+  "author": "Damian Krzeminski <pirxpilot@code42day.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/code42day/timepicker/issues"
+  }
+}
