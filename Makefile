@@ -1,5 +1,9 @@
 PROJECT=timepicker
-SRC=index.js lib/timepicker.js
+SRC=index.js
+CSS= \
+	node_modules/code42day-picker/node_modules/popover-component/node_modules/component-tip/tip.css \
+	node_modules/code42day-clock/lib/clock.css \
+	node_modules/code42day-picker/picker.css
 
 all: check compile
 
@@ -10,10 +14,9 @@ compile: build/build.js build/build.css
 build:
 	mkdir -p $@
 
-build/build.css: \
-		node_modules/popover-component/node_modules/component-tip/tip.css \
-		node_modules/code42day-clock/lib/clock.css \
-		lib/timepicker.css | build
+$(CSS): | node_modules
+
+build/build.css: $(CSS) | build
 	cat $^ > $@
 
 build/build.js: node_modules $(SRC) | build
