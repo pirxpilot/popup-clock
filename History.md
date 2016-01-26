@@ -1,4 +1,10 @@
 
+1.2.1 / 2016-01-26
+==================
+
+ * fix build: reference to tip.css
+ * fix build: stringify module is used by browserify
+
 1.2.0 / 2015-09-16
 ==================
 
