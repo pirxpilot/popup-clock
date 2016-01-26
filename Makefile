@@ -1,7 +1,7 @@
 PROJECT=timepicker
 SRC=index.js
 CSS= \
-	node_modules/code42day-picker/node_modules/popover-component/node_modules/component-tip/tip.css \
+	node_modules/code42day-picker/node_modules/code42day-popover/node_modules/code42day-tip/tip.css \
 	node_modules/code42day-clock/lib/clock.css \
 	node_modules/code42day-picker/picker.css
 
