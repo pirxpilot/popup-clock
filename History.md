@@ -1,4 +1,9 @@
 
+1.3.1 / 2017-02-04
+==================
+
+ * fix passing options to Timepicker constructor
+
 1.3.0 / 2017-02-04
 ==================
 
