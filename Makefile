@@ -1,7 +1,8 @@
 PROJECT=timepicker
+NODE_BIN=./node_modules/.bin
 SRC=index.js
 CSS= \
-	node_modules/code42day-picker/node_modules/code42day-popover/node_modules/code42day-tip/tip.css \
+	node_modules/code42day-tip/tip.css \
 	node_modules/code42day-clock/lib/clock.css \
 	node_modules/code42day-picker/picker.css
 
@@ -14,21 +15,21 @@ compile: build/build.js build/build.css
 build:
 	mkdir -p $@
 
-$(CSS): | node_modules
-
-build/build.css: $(CSS) | build
+build/build.css: $(CSS) | node_modules build
 	cat $^ > $@
 
-build/build.js: node_modules $(SRC) | build
+build/build.js: $(SRC) | node_modules build
 	browserify --require ./index.js:$(PROJECT) --outfile $@
 
 .DELETE_ON_ERROR: build/build.js
 
-node_modules: package.json
-	npm install
+$(CSS): | node_modules
 
-lint:
-	jshint $(SRC)
+node_modules: package.json
+	yarn && touch $@
+
+lint: | node_modules
+	$(NODE_BIN)/jshint $(SRC)
 
 clean:
 	rm -fr build node_modules

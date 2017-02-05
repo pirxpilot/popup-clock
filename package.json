@@ -28,6 +28,10 @@
     "url": "https://github.com/code42day/timepicker/issues"
   },
   "devDependencies": {
+    "jshint": "^2.9.4",
     "stringify": "^3.2.0"
-  }
+  },
+  "files": [
+    "index.js"
+  ]
 }
