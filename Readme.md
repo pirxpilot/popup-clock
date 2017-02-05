@@ -20,7 +20,7 @@
 ```js
 var Timepicker = require('timepicker');
 var el = document.querySelector('[name=time]');
-new Timepicker(el)
+new Timepicker(el, options)
   .clock
   .on('change', function(v) {
     el.value = (v.hour || '0') + ':' + (v.minute || '00');

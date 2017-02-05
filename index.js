@@ -4,9 +4,9 @@ var inherit = require('inherit');
 
 module.exports = Timepicker;
 
-function Timepicker(el) {
+function Timepicker(el, options) {
   if (!(this instanceof Timepicker)) return new Timepicker(el);
-  this.clock = new Clock();
+  this.clock = new Clock(options);
   Picker.call(this, el, this.clock);
 }
 
