@@ -1,4 +1,10 @@
 
+1.3.0 / 2017-02-04
+==================
+
+ * add `option` parameters passed to Clock
+ * switch from npm to yarn
+
 1.2.1 / 2016-01-26
 ==================
 
