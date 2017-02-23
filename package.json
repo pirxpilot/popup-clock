@@ -1,32 +1,29 @@
 {
-  "name": "code42day-timepicker",
+  "name": "popup-clock",
   "version": "1.3.1",
-  "description": "Timepicker component",
+  "description": "Popup timepicker component",
   "scripts": {
     "test": "make check"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/code42day/timepicker.git"
+    "url": "https://github.com/pirxpilot/popup-clock.git"
   },
   "keywords": [
     "browser"
   ],
   "dependencies": {
-    "code42day-clock": "^1.2.1",
-    "code42day-picker": "^1.0.0",
+    "component-clock": "^1.2.1",
+    "popup-picker": "^1.0.0",
     "component-inherit": "~0"
   },
   "browser": {
-    "clock": "code42day-clock",
-    "picker": "code42day-picker",
+    "clock": "component-clock",
+    "picker": "popup-picker",
     "inherit": "component-inherit"
   },
-  "author": "Damian Krzeminski <pirxpilot@code42day.com>",
+  "author": "Damian Krzeminski <pirxpilot@furkot.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/code42day/timepicker/issues"
-  },
   "devDependencies": {
     "jshint": "^2.9.4",
     "stringify": "^3.2.0"

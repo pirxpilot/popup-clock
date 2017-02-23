@@ -2,23 +2,23 @@
 [![Build Status][travis-image]][travis-url]
 [![Dependency Status][gemnasium-image]][gemnasium-url]
 
-# timepicker
+# popup-clock
 
-  Time picker ui component for [code42day-clock]
+  Time picker ui component for [popup-clock]
 
   ![Timepicker](https://gist.github.com/pirxpilot/5011178/raw/9a02c67f55d648cfd65f73d8ff9be81675b79d07/timepicker-preview.png)
 
-  Click [here](http://code42day.github.io/timepicker/) to see online demo.
+  Click [here](http://pirxpilot.github.io/popup-clock/) to see online demo.
 
 
 ## Installation
 
-    $ component install code42day/timepicker
+    $ npm install popup-clock
 
 ## Example
 
 ```js
-var Timepicker = require('timepicker');
+var Timepicker = require('popup-clock');
 var el = document.querySelector('[name=time]');
 new Timepicker(el, options)
   .clock
@@ -35,19 +35,19 @@ Create a new Timepicker attached to `el` input DOM node
 
 ### Timepicker.clock
 
-[clock][code42day-clock] reference
+[clock][popup-clock] reference
 
 ## License
 
   MIT
 
-[code42day-clock]: https://npmjs.org/package/code42day-clock
+[popup-clock]: https://npmjs.org/package/popup-clock
 
-[npm-image]: https://img.shields.io/npm/v/code42day-timepicker.svg
-[npm-url]: https://npmjs.org/package/code42day-timepicker
+[npm-image]: https://img.shields.io/npm/v/popup-clock.svg
+[npm-url]: https://npmjs.org/package/popup-clock
 
-[travis-url]: https://travis-ci.org/code42day/timepicker
-[travis-image]: https://img.shields.io/travis/code42day/timepicker.svg
+[travis-url]: https://travis-ci.org/pirxpilot/timepicker
+[travis-image]: https://img.shields.io/travis/pirxpilot/timepicker.svg
 
-[gemnasium-image]: https://img.shields.io/gemnasium/code42day/timepicker.svg
-[gemnasium-url]: https://gemnasium.com/code42day/timepicker
+[gemnasium-image]: https://img.shields.io/gemnasium/pirxpilot/timepicker.svg
+[gemnasium-url]: https://gemnasium.com/pirxpilot/timepicker

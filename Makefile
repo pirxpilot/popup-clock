@@ -3,8 +3,8 @@ NODE_BIN=./node_modules/.bin
 SRC=index.js
 CSS= \
 	node_modules/code42day-tip/tip.css \
-	node_modules/code42day-clock/lib/clock.css \
-	node_modules/code42day-picker/picker.css
+	node_modules/component-clock/lib/clock.css \
+	node_modules/popup-picker/picker.css
 
 all: check compile
 
