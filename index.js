@@ -1,13 +1,16 @@
-var Picker = require('picker');
-var Clock = require('clock');
-var inherit = require('inherit');
+const Picker = require('popup-picker');
+const Clock = require('component-clock');
 
-module.exports = Timepicker;
+class Timepicker extends Picker {
+  static of(...args) {
+    return new Timepicker(...args);
+  }
 
-function Timepicker(el, options) {
-  if (!(this instanceof Timepicker)) return new Timepicker(el, options);
-  this.clock = new Clock(options);
-  Picker.call(this, el, this.clock);
+  constructor(el, options) {
+    const clock = new Clock(options);
+    super(el, clock);
+    this.clock = clock;
+  }
 }
 
-inherit(Timepicker, Picker);
+module.exports = Timepicker;

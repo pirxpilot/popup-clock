@@ -141,10 +141,10 @@
         el.value = value;
       }
 
-      var picker = require('timepicker');
+      var Picker = require('timepicker');
       var el = document.querySelector('.time');
-      picker(el)
-        .on('change', update.bind(null, el))
+      new Picker(el)
+        .on('change', (v, complete) => update(el, v, complete))
         .on('show', function() {
           console.log('Timepicker shown');
         })
@@ -154,7 +154,7 @@
 
       var trigger = document.querySelector('.trigger');
       var triggerTime = document.querySelector('.trigger-time');
-      picker(trigger).on('change', update.bind(null, triggerTime));
+      Picker.of(trigger).on('change', (v, complete) => update(triggerTime, v, complete));
     </script>
   </body>
 </html>

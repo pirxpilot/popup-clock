@@ -2,17 +2,28 @@
 # yarn lockfile v1
 
 
+"@pirxpilot/events@~1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@pirxpilot/events/-/events-1.0.1.tgz#15068c967573d8b1a1482debd74384fafa1bd2b8"
+
 "@pirxpilot/in-groups-of@^1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@pirxpilot/in-groups-of/-/in-groups-of-1.1.1.tgz#f951813d11643133d28758950f6f9757652525a7"
 
-"@pirxpilot/popover@^1.1.1":
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/@pirxpilot/popover/-/popover-1.1.3.tgz#087b653186ddd50af6c544f535eed313925d324d"
+"@pirxpilot/popover@~2":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@pirxpilot/popover/-/popover-2.0.0.tgz#b35bc0807e74a869a830c1f36e07e7a885d22cba"
   dependencies:
-    code42day-tip "*"
-    component-inherit "~0"
-    component-query "*"
+    "@pirxpilot/tip" "~3"
+
+"@pirxpilot/tip@~3":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@pirxpilot/tip/-/tip-3.0.0.tgz#7de03bd785daa7bd765e8dd10bf0256c6010438a"
+  dependencies:
+    "@pirxpilot/events" "~1"
+    bounding-client-rect "^1.0.5"
+    component-emitter "^1.1.3"
+    domify "^1.3.0"
 
 amdefine@>=0.0.4:
   version "1.0.1"
@@ -32,11 +43,11 @@ bounding-client-rect@^1.0.5:
   dependencies:
     get-document "1"
 
-bounds@~1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/bounds/-/bounds-1.0.1.tgz#bf4b5eabe414496e78e3a4bbd455779077a6c5e2"
+bounds@~2:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/bounds/-/bounds-2.0.0.tgz#6629fe2c77bf6141bc590b7cd81b54f8cca63d59"
   dependencies:
-    clone-component "~0"
+    clone-component "^0.2.2"
 
 brace-expansion@^1.0.0:
   version "1.1.6"
@@ -96,119 +107,38 @@ cli@~1.0.0:
     exit "0.1.2"
     glob "^7.1.1"
 
-clone-component@~0:
+clone-component@^0.2.2:
   version "0.2.2"
   resolved "https://registry.yarnpkg.com/clone-component/-/clone-component-0.2.2.tgz#82e56c2e92cd34e7c42b668630c620128fa926ba"
   dependencies:
     component-type "*"
 
-code42day-css@~0:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/code42day-css/-/code42day-css-0.3.1.tgz#814e2d5de21d424aa18193ca14eb41734980d004"
-  dependencies:
-    component-type "^1.1.0"
-    computed-style-component "^0.1.0"
-    to-camel-case "^0.2.1"
-
-code42day-tip@*:
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/code42day-tip/-/code42day-tip-2.5.1.tgz#6623c8b3ccbc1c73fdf1f7a46b92d42f5476ef41"
-  dependencies:
-    bounding-client-rect "^1.0.5"
-    code42day-css "~0"
-    component-bind "*"
-    component-classes "^1.2.1"
-    component-emitter "^1.1.3"
-    component-events "^1.0.9"
-    component-query "~0"
-    domify "^1.3.0"
-
 commander@2.2.x:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.2.0.tgz#175ad4b9317f3ff615f201c1e57224f55a3e91df"
 
-component-bind@*:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/component-bind/-/component-bind-1.0.0.tgz#00c608ab7dcd93897c0009651b1d3a8e1e73bbd1"
-
-component-classes@^1.2.1, component-classes@^1.2.4:
-  version "1.2.6"
-  resolved "https://registry.yarnpkg.com/component-classes/-/component-classes-1.2.6.tgz#c642394c3618a4d8b0b8919efccbbd930e5cd691"
-  dependencies:
-    component-indexof "0.0.3"
-
-component-clock@^1.2.1:
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/component-clock/-/component-clock-1.5.1.tgz#caab711b877a5824c8dd545cf35dda98bb955b4d"
+component-clock@~2:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/component-clock/-/component-clock-2.0.0.tgz#ab583b2e846ced83eed296b640c5af0e679026f5"
   dependencies:
     "@pirxpilot/in-groups-of" "^1.1.1"
-    bounds "~1"
-    component-classes "^1.2.4"
+    bounds "~2"
     component-domify "^1.2.2"
     component-emitter "^1.2.0"
-    component-events "^1.0.9"
-    dataset "~0"
     el-component "^1.0.0"
-    inherits "^2.0.1"
     range-component "^1.0.0"
-
-component-closest@*:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/component-closest/-/component-closest-1.0.1.tgz#1ed0464132fc88a3510a2dabec079695789fb1b5"
-  dependencies:
-    component-matches-selector "~0.1.6"
-
-component-delegate@0.2.4:
-  version "0.2.4"
-  resolved "http://registry.npmjs.org/component-delegate/-/component-delegate-0.2.4.tgz#dc5028759ea681bea84a3d6bbd650207c3beb138"
-  dependencies:
-    component-closest "*"
-    component-event "*"
 
 component-domify@^1.2.2:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/component-domify/-/component-domify-1.2.2.tgz#2f2d6d5d75e5aad3a34cdf5ff232c181b85e4ed2"
 
-component-emitter@^1.1.2, component-emitter@^1.1.3, component-emitter@^1.2.0:
+component-emitter@^1.1.3, component-emitter@^1.2.0, component-emitter@~1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/component-emitter/-/component-emitter-1.2.1.tgz#137918d6d78283f7df7a6b7c5a63e140e69425e6"
 
-component-event@*, component-event@0.1.4, component-event@^0.1.3:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/component-event/-/component-event-0.1.4.tgz#3de78fc28782381787e24bf2a7c536bf0142c9b4"
-
-component-events@^1.0.9:
-  version "1.0.10"
-  resolved "http://registry.npmjs.org/component-events/-/component-events-1.0.10.tgz#2e96d166f50089a4b7ac72d56e7756ac1b7e8b83"
-  dependencies:
-    component-delegate "0.2.4"
-    component-event "0.1.4"
-
-component-indexof@0.0.3:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/component-indexof/-/component-indexof-0.0.3.tgz#11d091312239eb8f32c8f25ae9cb002ffe8d3c24"
-
-component-inherit@~0:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/component-inherit/-/component-inherit-0.0.3.tgz#645fc4adf58b72b649d5cae65135619db26ff143"
-
-component-matches-selector@~0.1.6:
-  version "0.1.6"
-  resolved "http://registry.npmjs.org/component-matches-selector/-/component-matches-selector-0.1.6.tgz#7b630e04e7e0c3b0019f31749fd70af5ed8b972e"
-  dependencies:
-    component-query "*"
-
-component-query@*, component-query@~0:
-  version "0.0.3"
-  resolved "https://registry.yarnpkg.com/component-query/-/component-query-0.0.3.tgz#07f49dab7071fa9606725df53e607f468acdaacf"
-
-component-type@*, component-type@^1.1.0:
+component-type@*:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/component-type/-/component-type-1.2.1.tgz#8a47901700238e4fc32269771230226f24b415a9"
-
-computed-style-component@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/computed-style-component/-/computed-style-component-0.1.0.tgz#38c2138ec3f108a78eed3163cb6c98a84ddc0a28"
 
 concat-map@0.0.1:
   version "0.0.1"
@@ -230,10 +160,6 @@ constant-case@^1.0.0:
 core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
-
-dataset@~0:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/dataset/-/dataset-0.3.1.tgz#191ccbf3be6d281a6b3ff4bf0698800bd0367cb7"
 
 date-now@^0.1.4:
   version "0.1.4"
@@ -350,7 +276,7 @@ inflight@^1.0.4:
     once "^1.3.0"
     wrappy "1"
 
-inherits@2, inherits@^2.0.1, inherits@~2.0.1:
+inherits@2, inherits@~2.0.1:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/inherits/-/inherits-2.0.3.tgz#633c2c83e3da42a502f52466022480f4208261de"
 
@@ -441,13 +367,12 @@ path-is-absolute@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/path-is-absolute/-/path-is-absolute-1.0.1.tgz#174b9268735534ffbc7ace6bf53a5a9e1b5c5f5f"
 
-popup-picker@^1.0.0:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/popup-picker/-/popup-picker-1.0.2.tgz#463ec0b01056e9dc4d8a62fecbee22a67a1ad644"
+popup-picker@~2:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/popup-picker/-/popup-picker-2.0.0.tgz#c3528e365fb628c9d069c93738bc9e406926b1a2"
   dependencies:
-    "@pirxpilot/popover" "^1.1.1"
-    component-emitter "^1.1.2"
-    component-event "^0.1.3"
+    "@pirxpilot/popover" "~2"
+    component-emitter "~1"
 
 range-component@^1.0.0:
   version "1.0.0"
@@ -531,22 +456,6 @@ title-case@^1.0.0:
   dependencies:
     sentence-case "^1.1.1"
     upper-case "^1.0.3"
-
-to-camel-case@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/to-camel-case/-/to-camel-case-0.2.1.tgz#200799152cfa5e752b7aad0dfe8b7af105cafaa2"
-  dependencies:
-    to-space-case "0.1.2"
-
-to-no-case@0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/to-no-case/-/to-no-case-0.1.1.tgz#cf33c70e0f28168d95e4159abf150e8c542ef9fe"
-
-to-space-case@0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/to-space-case/-/to-space-case-0.1.2.tgz#9a66be3ebe53f2779f687f0262effd1fc5b6d15e"
-  dependencies:
-    to-no-case "0.1.1"
 
 uglify-js@2.4.x:
   version "2.4.24"

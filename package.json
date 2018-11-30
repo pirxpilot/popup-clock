@@ -13,14 +13,8 @@
     "browser"
   ],
   "dependencies": {
-    "component-clock": "^1.2.1",
-    "popup-picker": "^1.0.0",
-    "component-inherit": "~0"
-  },
-  "browser": {
-    "clock": "component-clock",
-    "picker": "popup-picker",
-    "inherit": "component-inherit"
+    "component-clock": "~2",
+    "popup-picker": "~2"
   },
   "author": "Damian Krzeminski <pirxpilot@furkot.com>",
   "license": "MIT",
