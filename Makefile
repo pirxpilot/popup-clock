@@ -2,7 +2,7 @@ PROJECT=timepicker
 NODE_BIN=./node_modules/.bin
 SRC=index.js
 CSS= \
-	node_modules/code42day-tip/tip.css \
+	node_modules/@pirxpilot/tip/tip.css \
 	node_modules/component-clock/lib/clock.css \
 	node_modules/popup-picker/picker.css
 
