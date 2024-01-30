@@ -19,7 +19,7 @@
   "author": "Damian Krzeminski <pirxpilot@furkot.com>",
   "license": "MIT",
   "devDependencies": {
-    "jshint": "^2.9.4",
+    "@pirxpilot/jshint": "~3",
     "stringify": "^3.2.0"
   },
   "files": [
