@@ -1,4 +1,11 @@
 
+2.0.1 / 2024-01-30
+==================
+
+ * replace Travis CI with github actions
+ * replace browserify with esbuild
+ * replace jsint with @pirxpilot/jshint
+
 2.0.0 / 2018-11-29
 ==================
 
