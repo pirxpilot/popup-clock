@@ -5,10 +5,7 @@
   "scripts": {
     "test": "make check"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/pirxpilot/popup-clock.git"
-  },
+  "repository": "github:pirxpilot/popup-clock",
   "keywords": [
     "browser"
   ],
