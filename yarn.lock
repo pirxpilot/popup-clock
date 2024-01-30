@@ -137,6 +137,11 @@
     optymista "^0.1.0"
     strip-json-comments "~3"
 
+"@pirxpilot/nanoassert@~1":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@pirxpilot/nanoassert/-/nanoassert-1.0.0.tgz#3728178e1f207099e0df32f5449ae8e0e9cde33d"
+  integrity sha512-yVhwF3mzefQ0xLa6F71W0S11Sl55e8vOjSOZ/lgw9Ynt0HfM6wLLoTQYR2jA6EbOTHJJd6qv64AhxWmcwam4mQ==
+
 "@pirxpilot/popover@~2":
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/@pirxpilot/popover/-/popover-2.0.1.tgz#6b00614a9695c5b6b4928b2020421d4b766abb61"
@@ -145,11 +150,12 @@
     "@pirxpilot/tip" "~3"
 
 "@pirxpilot/tip@~3":
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/@pirxpilot/tip/-/tip-3.0.3.tgz#e2bcc62dd956c180125ebb304335883ab29f79aa"
-  integrity sha512-+3jpCYe2t04jVTxSmP4AuMF7+TqZbfq06aRNfNV2/rjZgPNMx8YG5YUq+pTRfecEOBDIWy52Q0OjyXa1AcOP/w==
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@pirxpilot/tip/-/tip-3.1.1.tgz#f50fc918dd641132c49bb3b7ea0b5d7b9afdadb1"
+  integrity sha512-A3OH9vKzLF7DBOCJNj9N2o3KJg/OYvZshh25sqXQCtb+MRIIwc63raaorvIHvHi7kIs9U1/RJtpeq1L/It1mPA==
   dependencies:
     "@pirxpilot/events" "~1"
+    "@pirxpilot/nanoassert" "~1"
     bounding-client-rect "^1.0.5"
     component-emitter "^1.1.3"
 
@@ -161,16 +167,14 @@ balanced-match@^1.0.0:
 bounding-client-rect@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/bounding-client-rect/-/bounding-client-rect-1.0.5.tgz#99e2cd2602d07f22ea3beee420534504fd4424cf"
-  integrity sha1-meLNJgLQfyLqO+7kIFNFBP1EJM8=
+  integrity sha512-3OVNM56TuMbHZYjbIbAkHZ7VHYVK9RPLr3s2nZucuJm1HgDBFEY6twJce4dCNwF0MO3ySOyA9KUZ+pObCd4mow==
   dependencies:
     get-document "1"
 
-bounds@~2:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/bounds/-/bounds-2.0.0.tgz#6629fe2c77bf6141bc590b7cd81b54f8cca63d59"
-  integrity sha512-2u4rO7srbcBaNR+u1ZWB2I9P0CPaHGCsiNsOZTGjPKENIMWOULhJgab5YXYtUaECDYqeDSgPRBw4Ho78200YcQ==
-  dependencies:
-    clone-component "^0.2.2"
+bounds@~3:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/bounds/-/bounds-3.0.0.tgz#d13e24e58c8a54414e2aba193f505de39e8848d0"
+  integrity sha512-JzRUVqVzqxw7itORBsVTsySbLYRbktYpL1ZW8nz9ueQOwja6xkDUWmIimaGyvvR+cU1tYZZzs99okpQHPBLh6w==
 
 brace-expansion@^2.0.1:
   version "2.0.1"
@@ -179,44 +183,26 @@ brace-expansion@^2.0.1:
   dependencies:
     balanced-match "^1.0.0"
 
-clone-component@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/clone-component/-/clone-component-0.2.2.tgz#82e56c2e92cd34e7c42b668630c620128fa926ba"
-  integrity sha1-guVsLpLNNOfEK2aGMMYgEo+pJro=
-  dependencies:
-    component-type "*"
-
 component-clock@~2:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/component-clock/-/component-clock-2.0.1.tgz#b6d2505d7cc4aa0e7b4f141cb20fd9b45f5dfc60"
-  integrity sha512-PCBA/a+H1TFYxSnT/JLux/5zlNfOap6tHWBx3pkBlzNk9nIFhR05B9d2fNKd+f/uOjs2w2O9et/j/zbVWNAiuw==
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/component-clock/-/component-clock-2.0.4.tgz#4e81849e0c5292db370369822d306abc87767994"
+  integrity sha512-gVx24np8kNgzVEtuV4txOZPlbd626KtAqgTBPGtMsGPAqJE7dT4qW6S1wRvj5Bdm0LP5N6dMe3fX5VQdV8wi6g==
   dependencies:
     "@pirxpilot/in-groups-of" "^1.1.1"
-    bounds "~2"
-    component-domify "^1.2.2"
+    bounds "~3"
     component-emitter "^1.2.0"
     el-component "^1.0.0"
     range-component "^1.0.0"
 
-component-domify@^1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/component-domify/-/component-domify-1.2.2.tgz#2f2d6d5d75e5aad3a34cdf5ff232c181b85e4ed2"
-  integrity sha1-Ly1tXXXlqtOjTN9f8jLBgbheTtI=
-
 component-emitter@^1.1.3, component-emitter@^1.2.0, component-emitter@~1:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/component-emitter/-/component-emitter-1.3.0.tgz#16e4070fba8ae29b679f2215853ee181ab2eabc0"
-  integrity sha512-Rd3se6QB+sO1TwqZjscQrurpEPIfO0/yYnSin6Q/rD3mOutHvUrCAhJub3r90uNb+SESBuE0QYoB90YdfatsRg==
-
-component-type@*:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/component-type/-/component-type-1.2.1.tgz#8a47901700238e4fc32269771230226f24b415a9"
-  integrity sha1-ikeQFwAjjk/DIml3EjAibyS0Fak=
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/component-emitter/-/component-emitter-1.3.1.tgz#ef1d5796f7d93f135ee6fb684340b26403c97d17"
+  integrity sha512-T0+barUSQRTUQASh8bx02dl+DhF54GtIDY13Y3m9oWTklKbb3Wv974meRpeZ3lp1JpLVECWWNHC4vaG2XHXouQ==
 
 el-component@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/el-component/-/el-component-1.0.1.tgz#ef4ba9d8b5aa9faf1e2491d483aac8e4470b381b"
-  integrity sha1-70up2LWqn68eJJHUg6rI5EcLOBs=
+  integrity sha512-YcWzu92UuLH+OempSa/Eb8XJkL1lvrz3LBJIG6PUFiHWCdW9ucbSaygpz9nrvmiNUN8uBUtoRp5cWqT3+BYhOQ==
 
 esbuild@^0.20.0:
   version "0.20.0"
@@ -250,7 +236,7 @@ esbuild@^0.20.0:
 get-document@1:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/get-document/-/get-document-1.0.0.tgz#4821bce66f1c24cb0331602be6cb6b12c4f01c4b"
-  integrity sha1-SCG85m8cJMsDMWAr5strEsTwHEs=
+  integrity sha512-8E7H2Xxibav+/rQTTtm6gFlSQwDoAQg667yheA+vWQr/amxEuswChzGo4MIbOJJoR0SMpDyhbUqWp3FpIfwD9A==
 
 lodash@~4.17.21:
   version "4.17.21"
@@ -280,7 +266,7 @@ popup-picker@~2:
 range-component@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/range-component/-/range-component-1.0.0.tgz#610f33f8bd21ff2070f8e7953a4b838d5acaa868"
-  integrity sha1-YQ8z+L0h/yBw+OeVOkuDjVrKqGg=
+  integrity sha512-y1piNNCADAxEvWGvA1ioKc3rVKp3sPWLlUc0XXt5LkanrtR4jX1Sw0DYObBba9Qilmu40hNvYE+iH9cQWkEeTw==
 
 strip-json-comments@~3:
   version "3.1.1"
