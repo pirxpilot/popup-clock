@@ -141,9 +141,8 @@
         el.value = value;
       }
 
-      var Picker = require('timepicker');
       var el = document.querySelector('.time');
-      new Picker(el)
+      new PopupClock(el)
         .on('change', (v, complete) => update(el, v, complete))
         .on('show', function() {
           console.log('Timepicker shown');
@@ -154,7 +153,7 @@
 
       var trigger = document.querySelector('.trigger');
       var triggerTime = document.querySelector('.trigger-time');
-      Picker.of(trigger).on('change', (v, complete) => update(triggerTime, v, complete));
+      PopupClock.of(trigger).on('change', (v, complete) => update(triggerTime, v, complete));
     </script>
   </body>
 </html>
