@@ -19,9 +19,12 @@ build/build.css: $(CSS) | node_modules build
 	cat $^ > $@
 
 build/build.js: $(SRC) | node_modules build
-	browserify --require ./index.js:$(PROJECT) --outfile $@
-
-.DELETE_ON_ERROR: build/build.js
+	$(NODE_BIN)/esbuild \
+		--bundle \
+		--define:DEBUG="true" \
+		--global-name=PopupClock \
+		--outfile=$@ \
+		index.js
 
 $(CSS): | node_modules
 

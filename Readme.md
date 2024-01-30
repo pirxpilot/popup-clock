@@ -1,15 +1,12 @@
 [![NPM version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Dependency Status][gemnasium-image]][gemnasium-url]
+[![Build Status][build-image]][build-url]
+[![Dependency Status][deps-image]][deps-url]
 
 # popup-clock
 
   Time picker ui component for [popup-clock]
 
-  ![Timepicker](https://gist.github.com/pirxpilot/5011178/raw/9a02c67f55d648cfd65f73d8ff9be81675b79d07/timepicker-preview.png)
-
   Click [here](http://pirxpilot.github.io/popup-clock/) to see online demo.
-
 
 ## Installation
 
@@ -43,11 +40,11 @@ Create a new Timepicker attached to `el` input DOM node
 
 [popup-clock]: https://npmjs.org/package/popup-clock
 
-[npm-image]: https://img.shields.io/npm/v/popup-clock.svg
+[npm-image]: https://img.shields.io/npm/v/popup-clock
 [npm-url]: https://npmjs.org/package/popup-clock
 
-[travis-url]: https://travis-ci.org/pirxpilot/timepicker
-[travis-image]: https://img.shields.io/travis/pirxpilot/timepicker.svg
+[build-url]: https://github.com/pirxpilot/popup-clock/actions/workflows/check.yaml
+[build-image]: https://img.shields.io/github/actions/workflow/status/pirxpilot/popup-clock/check.yaml?branch=main
 
-[gemnasium-image]: https://img.shields.io/gemnasium/pirxpilot/timepicker.svg
-[gemnasium-url]: https://gemnasium.com/pirxpilot/timepicker
+[deps-image]: https://img.shields.io/librariesio/release/npm/popup-clock
+[deps-url]: https://libraries.io/npm/popup-clock
