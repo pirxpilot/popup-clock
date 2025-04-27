@@ -5,7 +5,10 @@
   "scripts": {
     "test": "make check"
   },
-  "repository": "github:pirxpilot/popup-clock",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pirxpilot/popup-clock.git"
+  },
   "keywords": [
     "browser"
   ],
@@ -16,7 +19,7 @@
   "author": "Damian Krzeminski <pirxpilot@furkot.com>",
   "license": "MIT",
   "devDependencies": {
-    "@pirxpilot/jshint": "~3",
+    "@biomejs/biome": "^1.9.4",
     "esbuild": "^0.20.0"
   },
   "files": [

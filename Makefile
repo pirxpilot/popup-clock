@@ -29,12 +29,16 @@ build/build.js: $(SRC) | node_modules build
 $(CSS): | node_modules
 
 node_modules: package.json
-	yarn && touch $@
+	yarn
+	touch $@
 
 lint: | node_modules
-	$(NODE_BIN)/jshint $(SRC)
+	$(NODE_BIN)/biome ci
+
+format: | node_modules
+	$(NODE_BIN)/biome check --fix
 
 clean:
 	rm -fr build node_modules
 
-.PHONY: clean lint check all compile
+.PHONY: clean format lint check all compile
