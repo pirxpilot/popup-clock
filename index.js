@@ -1,7 +1,7 @@
-const Picker = require('popup-picker');
-const Clock = require('component-clock');
+import Clock from 'component-clock';
+import Picker from 'popup-picker';
 
-class Timepicker extends Picker {
+export default class Timepicker extends Picker {
   static of(...args) {
     return new Timepicker(...args);
   }
@@ -12,5 +12,3 @@ class Timepicker extends Picker {
     this.clock = clock;
   }
 }
-
-module.exports = Timepicker;
