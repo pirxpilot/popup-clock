@@ -135,6 +135,7 @@
       <a href='#' class='trigger'>Click to change time</a>
     </div>
     <script>
+      var PopupClock = PopupClock.default;
       function update(el, v, complete) {
         var value = '' + (v.hour || '00') + ':' + (v.minute || '00');
         value += complete ? ' <complete>' : ' <pending>';
