@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
     <title>Timepicker</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link rel="stylesheet" href="build/build.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="build/build.css" />
     <script src="build/build.js"></script>
     <style>
-
       body {
         font-family: sans-serif;
         padding: 100px;
@@ -20,32 +19,32 @@
 
       .hour caption,
       .minute caption {
-        font-weight: bold
+        font-weight: bold;
       }
       .clock a {
         display: block;
         padding: 5px;
         text-decoration: none;
         color: inherit;
-        border-radius: 3px
+        border-radius: 3px;
       }
       .clock a:hover {
-        background: #efefef
+        background: #efefef;
       }
       .clock a:active {
-        opacity: .75;
+        opacity: 0.75;
       }
       .clock .selected {
-        background: none
+        background: none;
       }
       .clock .selected a {
-        background: linear-gradient(#76aaef, #0085CC);
+        background: linear-gradient(#76aaef, #0085cc);
         color: white;
-        box-shadow: inset 0 1px #2b8dea
+        box-shadow: inset 0 1px #2b8dea;
       }
       .clock .invalid {
-        opacity: .2;
-        background-color: rgba(0, 0, 0, .2);
+        opacity: 0.2;
+        background-color: rgba(0, 0, 0, 0.2);
         cursor: default;
       }
       .clock a {
@@ -53,12 +52,12 @@
       }
       .popover-content {
         background-color: white;
-        color: rgba(0,0,0,.75);
+        color: rgba(0, 0, 0, 0.75);
         padding: 0;
       }
 
       .tip-inner {
-        background-color: rgba(0,0,0,.75);
+        background-color: rgba(0, 0, 0, 0.75);
         color: #fff;
         padding: 8px 10px 7px 10px;
         text-align: center;
@@ -69,13 +68,21 @@
         width: 0;
         height: 0;
         line-height: 0;
-        border: 5px dashed rgba(0,0,0,.75);
+        border: 5px dashed rgba(0, 0, 0, 0.75);
       }
 
-      .tip-arrow-top { border-top-color: rgba(0,0,0,.75) }
-      .tip-arrow-bottom { border-bottom-color: rgba(0,0,0,.75) }
-      .tip-arrow-left { border-left-color: rgba(0,0,0,.75) }
-      .tip-arrow-right { border-right-color: rgba(0,0,0,.75) }
+      .tip-arrow-top {
+        border-top-color: rgba(0, 0, 0, 0.75);
+      }
+      .tip-arrow-bottom {
+        border-bottom-color: rgba(0, 0, 0, 0.75);
+      }
+      .tip-arrow-left {
+        border-left-color: rgba(0, 0, 0, 0.75);
+      }
+      .tip-arrow-right {
+        border-right-color: rgba(0, 0, 0, 0.75);
+      }
 
       .tip-top .tip-arrow,
       .tip-top-left .tip-arrow,
@@ -86,7 +93,7 @@
         border-top-style: solid;
         border-bottom: none;
         border-left-color: transparent;
-        border-right-color: transparent
+        border-right-color: transparent;
       }
 
       .tip-bottom .tip-arrow,
@@ -98,7 +105,7 @@
         border-bottom-style: solid;
         border-top: none;
         border-left-color: transparent;
-        border-right-color: transparent
+        border-right-color: transparent;
       }
 
       .tip-left .tip-arrow {
@@ -108,7 +115,7 @@
         border-left-style: solid;
         border-right: none;
         border-top-color: transparent;
-        border-bottom-color: transparent
+        border-bottom-color: transparent;
       }
 
       .tip-right .tip-arrow {
@@ -118,42 +125,41 @@
         border-right-style: solid;
         border-left: none;
         border-top-color: transparent;
-        border-bottom-color: transparent
+        border-bottom-color: transparent;
       }
-
     </style>
   </head>
   <body>
     <h1>Timepicker</h1>
     <div>
       <h2>Input as trigger</h2>
-      <input type="text" class="time" placeholder="Choose time"/>
+      <input type="text" class="time" placeholder="Choose time" />
     </div>
     <div>
       <h2>Link as trigger</h2>
-      <input type="text" class='trigger-time'/>
-      <a href='#' class='trigger'>Click to change time</a>
+      <input type="text" class="trigger-time" />
+      <a href="#" class="trigger">Click to change time</a>
     </div>
     <script>
-      var PopupClock = PopupClock.default;
+      PopupClock = PopupClock.default;
       function update(el, v, complete) {
-        var value = '' + (v.hour || '00') + ':' + (v.minute || '00');
+        var value = `${v.hour || '00'}:${v.minute || '00'}`;
         value += complete ? ' <complete>' : ' <pending>';
         el.value = value;
       }
 
-      var el = document.querySelector('.time');
+      const el = document.querySelector('.time');
       new PopupClock(el)
         .on('change', (v, complete) => update(el, v, complete))
-        .on('show', function() {
+        .on('show', () => {
           console.log('Timepicker shown');
         })
-        .on('hide', function() {
+        .on('hide', () => {
           console.log('Timepicker hidden');
         });
 
-      var trigger = document.querySelector('.trigger');
-      var triggerTime = document.querySelector('.trigger-time');
+      const trigger = document.querySelector('.trigger');
+      const triggerTime = document.querySelector('.trigger-time');
       PopupClock.of(trigger).on('change', (v, complete) => update(triggerTime, v, complete));
     </script>
   </body>
