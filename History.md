@@ -1,4 +1,11 @@
 
+3.0.1 / 2026-02-22
+==================
+
+ * update github actions
+ * upgrade `biome` to 2.4.4
+ * fix example
+
 3.0.0 / 2025-04-27
 ==================
 
