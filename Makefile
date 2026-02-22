@@ -15,10 +15,10 @@ compile: build/build.js build/build.css
 build:
 	mkdir -p $@
 
-build/build.css: $(CSS) | node_modules build
+build/build.css: $(CSS) | build
 	cat $^ > $@
 
-build/build.js: $(SRC) | node_modules build
+build/build.js: $(SRC) | build
 	$(NODE_BIN)/esbuild \
 		--bundle \
 		--define:DEBUG="true" \
@@ -26,16 +26,12 @@ build/build.js: $(SRC) | node_modules build
 		--outfile=$@ \
 		index.js
 
-$(CSS): | node_modules
+$(CSS):
 
-node_modules: package.json
-	yarn
-	touch $@
-
-lint: | node_modules
+lint:
 	$(NODE_BIN)/biome ci
 
-format: | node_modules
+format:
 	$(NODE_BIN)/biome check --fix
 
 clean:

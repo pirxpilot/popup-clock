@@ -21,7 +21,8 @@
   "author": "Damian Krzeminski <pirxpilot@furkot.com>",
   "license": "MIT",
   "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
+    "@biomejs/biome": "2.4.4",
+    "@pirxpilot/tip": "~4",
     "esbuild": "^0.25.0"
   },
   "files": [
